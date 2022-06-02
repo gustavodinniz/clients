@@ -35,5 +35,5 @@ public class ServiceProvidedModel implements Serializable {
 
     @Column
     @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDateTime serviceDate;
+    private LocalDate serviceDate;
 }
