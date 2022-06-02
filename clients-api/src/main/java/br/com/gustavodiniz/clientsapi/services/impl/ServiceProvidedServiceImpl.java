@@ -7,7 +7,6 @@ import br.com.gustavodiniz.clientsapi.repositories.ServiceProvidedRepository;
 import br.com.gustavodiniz.clientsapi.services.ClientService;
 import br.com.gustavodiniz.clientsapi.services.ServiceProvidedService;
 import br.com.gustavodiniz.clientsapi.utils.BigDecimalConverter;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
