@@ -1,15 +1,20 @@
 package br.com.gustavodiniz.clientsapi.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "TB_SERVICES_PROVIDED")
 public class ServiceProvidedModel implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -30,5 +35,5 @@ public class ServiceProvidedModel implements Serializable {
 
     @Column
     @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDate serviceDate;
+    private LocalDateTime serviceDate;
 }
