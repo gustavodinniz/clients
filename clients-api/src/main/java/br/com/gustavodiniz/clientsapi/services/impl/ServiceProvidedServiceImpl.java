@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 @Service
 public class ServiceProvidedServiceImpl implements ServiceProvidedService {
@@ -39,5 +40,10 @@ public class ServiceProvidedServiceImpl implements ServiceProvidedService {
         serviceProvided.setServiceValue(bigDecimalConverter.converter(serviceProvidedDTO.getServiceValue()));
 
         return serviceProvidedRepository.save(serviceProvided);
+    }
+
+    @Override
+    public List<ServiceProvidedModel> findByClientNameAndMonth(String name, Integer month) {
+        return serviceProvidedRepository.findByClientNameAndMonth(name, month);
     }
 }
