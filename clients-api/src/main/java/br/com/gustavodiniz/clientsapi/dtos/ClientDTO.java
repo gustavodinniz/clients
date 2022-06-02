@@ -9,7 +9,6 @@ import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -27,5 +26,5 @@ public class ClientDTO {
     private String cpf;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDate registrationDate;
+    private String registrationDate;
 }

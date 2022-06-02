@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Configuration
@@ -38,19 +38,19 @@ public class LocalConfig {
 
         userRepository.saveAll(List.of(userModel1, userModel2, userModel3, userModel4, userModel5));
 
-        ClientModel clientModel1 = new ClientModel(null, "Pedro", "12312322446", LocalDateTime.now());
-        ClientModel clientModel2 = new ClientModel(null, "Jose", "12312322446", LocalDateTime.now());
-        ClientModel clientModel3 = new ClientModel(null, "Marcos", "12312322446", LocalDateTime.now());
-        ClientModel clientModel4 = new ClientModel(null, "Leo", "12312322446", LocalDateTime.now());
-        ClientModel clientModel5 = new ClientModel(null, "Joao", "12312322446", LocalDateTime.now());
+        ClientModel clientModel1 = new ClientModel(null, "Pedro", "12312322446", LocalDate.now());
+        ClientModel clientModel2 = new ClientModel(null, "Jose", "12312322446", LocalDate.now());
+        ClientModel clientModel3 = new ClientModel(null, "Marcos", "12312322446", LocalDate.now());
+        ClientModel clientModel4 = new ClientModel(null, "Leo", "12312322446", LocalDate.now());
+        ClientModel clientModel5 = new ClientModel(null, "Joao", "12312322446", LocalDate.now());
 
         clientRepository.saveAll(List.of(clientModel1, clientModel2, clientModel3, clientModel4, clientModel5));
 
-        ServiceProvidedModel serviceProvidedModel1 = new ServiceProvidedModel(null, "Formatar notebook", clientModel1, BigDecimal.valueOf(100), LocalDateTime.now());
-        ServiceProvidedModel serviceProvidedModel2 = new ServiceProvidedModel(null, "Upgrade Memoria RAM", clientModel2, BigDecimal.valueOf(500), LocalDateTime.now());
-        ServiceProvidedModel serviceProvidedModel3 = new ServiceProvidedModel(null, "Upgrade SSD", clientModel3, BigDecimal.valueOf(500), LocalDateTime.now());
-        ServiceProvidedModel serviceProvidedModel4 = new ServiceProvidedModel(null, "Trocar tela", clientModel4, BigDecimal.valueOf(1000), LocalDateTime.now());
-        ServiceProvidedModel serviceProvidedModel5 = new ServiceProvidedModel(null, "Teclado com Defeito", clientModel5, BigDecimal.valueOf(250), LocalDateTime.now());
+        ServiceProvidedModel serviceProvidedModel1 = new ServiceProvidedModel(null, "Formatar notebook", clientModel1, BigDecimal.valueOf(100), LocalDate.now());
+        ServiceProvidedModel serviceProvidedModel2 = new ServiceProvidedModel(null, "Upgrade Memoria RAM", clientModel2, BigDecimal.valueOf(500), LocalDate.now());
+        ServiceProvidedModel serviceProvidedModel3 = new ServiceProvidedModel(null, "Upgrade SSD", clientModel3, BigDecimal.valueOf(500), LocalDate.now());
+        ServiceProvidedModel serviceProvidedModel4 = new ServiceProvidedModel(null, "Trocar tela", clientModel4, BigDecimal.valueOf(1000), LocalDate.now());
+        ServiceProvidedModel serviceProvidedModel5 = new ServiceProvidedModel(null, "Teclado com Defeito", clientModel5, BigDecimal.valueOf(250), LocalDate.now());
 
         serviceProvidedRepository.saveAll(List.of(serviceProvidedModel1, serviceProvidedModel2, serviceProvidedModel3, serviceProvidedModel4, serviceProvidedModel5));
     }

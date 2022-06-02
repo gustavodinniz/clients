@@ -36,10 +36,10 @@ public class ClientModel implements Serializable {
 
     @JsonFormat(pattern = "dd/MM/yyyy")
     @Column(name = "registration_date", updatable = false)
-    private LocalDateTime registrationDate;
+    private LocalDate registrationDate;
 
     @PrePersist
     public void prePersist() {
-        setRegistrationDate(LocalDateTime.now());
+        setRegistrationDate(LocalDate.now());
     }
 }
