@@ -54,7 +54,7 @@ public class ClientController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ClientDTO> update(@PathVariable Integer id, @RequestBody ClientDTO clientDTO) {
+    public ResponseEntity<ClientDTO> update(@PathVariable Integer id, @RequestBody @Valid ClientDTO clientDTO) {
         clientDTO.setId(id);
         ClientModel clientModel = clientService.update(clientDTO);
         return ResponseEntity.ok().body(modelMapper.map(clientModel, ClientDTO.class));

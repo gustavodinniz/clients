@@ -17,10 +17,10 @@ public class ServiceProvidedDTO {
     @NotEmpty(message = "The price field is required.")
     private String serviceValue;
 
-    @NotNull(message = "The date field is required.")
+    @NotEmpty(message = "The date field is required.")
     private String serviceDate;
 
-    @NotEmpty(message = "The client field is required.")
+    @NotNull(message = "The client field is required.")
     private Integer clientId;
 
 

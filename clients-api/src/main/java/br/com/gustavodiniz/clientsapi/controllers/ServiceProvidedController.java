@@ -22,7 +22,6 @@ public class ServiceProvidedController {
     @Autowired
     private ServiceProvidedService serviceProvidedService;
 
-
     @PostMapping
     public ResponseEntity<ServiceProvidedDTO> create(@RequestBody @Valid ServiceProvidedDTO serviceProvidedDTO) {
 
