@@ -12,6 +12,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @Data
@@ -28,20 +29,17 @@ public class ClientModel implements Serializable {
     private Integer id;
 
     @Column(nullable = false, length = 150)
-    @NotEmpty(message = "{mandatory.name.field}")
     private String name;
 
     @Column(nullable = false, length = 11)
-    @NotNull(message = "{mandatory.cpf.field}")
-    @CPF(message = "{invalid.cpf.field}")
     private String cpf;
 
-    @Column(name = "registration_date", updatable = false)
     @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDate registrationDate;
+    @Column(name = "registration_date", updatable = false)
+    private LocalDateTime registrationDate;
 
     @PrePersist
     public void prePersist() {
-        setRegistrationDate(LocalDate.now());
+        setRegistrationDate(LocalDateTime.now());
     }
 }
