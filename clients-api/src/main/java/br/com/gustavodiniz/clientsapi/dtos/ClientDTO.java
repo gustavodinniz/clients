@@ -19,11 +19,11 @@ public class ClientDTO {
 
     private Integer id;
 
-    @NotEmpty(message = "{mandatory.name.field}")
+    @NotEmpty(message = "The name field is required.")
     private String name;
 
-    @NotNull(message = "{mandatory.cpf.field}")
-    @CPF(message = "{invalid.cpf.field}")
+    @NotNull(message = "The CPF field is required.")
+    @CPF(message = "CPF invalid.")
     private String cpf;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
